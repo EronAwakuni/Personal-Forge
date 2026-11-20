@@ -4035,5 +4035,18 @@ document.getElementById("exportCsv").addEventListener("click", () => {
   });
 })();
 </script>
+  <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(registration => {
+        console.log("Forge offline support registered:", registration.scope);
+      })
+      .catch(error => {
+        console.error("Forge offline support failed:", error);
+      });
+  });
+}
+</script>
 </body>
 </html>
