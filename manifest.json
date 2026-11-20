@@ -1,0 +1,11 @@
+{
+  "id": "./",
+  "name": "Project Forge",
+  "short_name": "Forge",
+  "description": "Personal health and fitness tracking",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B0A0C",
+  "theme_color": "#0B0A0C"
+}
