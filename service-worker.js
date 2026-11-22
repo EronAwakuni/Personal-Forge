@@ -4,7 +4,9 @@ const CACHE_NAME = "forge-offline-v1";
 const APP_FILES = [
   "./",
   "./index.html",
-  "./manifest.json"
+  "./manifest.json",
+  "./forge-icon-192.png",
+  "./forge-icon-512.png"
 ];
 
 // Install: save the main Forge files.
