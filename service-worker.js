@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "forge-offline-v1";
+const CACHE_NAME = "forge-offline-v2";
 
 const APP_FILES = [
   "./",
