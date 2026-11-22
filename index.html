@@ -4048,5 +4048,61 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
+  <style>
+  #forge-splash {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    background: #0B0A0C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease;
+  }
+
+  #forge-splash img {
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+  }
+
+  #forge-splash h1 {
+    color: #D0D0D0;
+    font-size: 25px;
+    letter-spacing: 7px;
+    font-weight: 800;
+    margin-top: 20px;
+  }
+
+  #forge-splash.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
+
+<div id="forge-splash">
+  <img src="./forge-icon-512.png" alt="Forge anvil and hammer">
+  <h1>PROJECT FORGE</h1>
+</div>
+
+<script>
+(function () {
+  const splash = document.getElementById("forge-splash");
+
+  function hideSplash() {
+    setTimeout(() => {
+      splash.classList.add("hidden");
+      setTimeout(() => splash.remove(), 650);
+    }, 900);
+  }
+
+  if (document.readyState === "complete") {
+    hideSplash();
+  } else {
+    window.addEventListener("load", hideSplash, { once: true });
+  }
+})();
+</script>
 </body>
 </html>
